@@ -7,13 +7,14 @@ The configuration and private settings are in the secrets.py file which allows f
 
 * Configuration of how many local backups to keep
 * Configuration of how many remote backups to keep
-* Usernames and passwrod for access to the PartKeepr MariaDB and a remote file share
+  * if you do not want or do not have a remote file server set the __remote_backups_to_keep__ to 0
+* Usernames and passwrod for access to the PartKeepr MariaDB (also in a Docker Container) and a remote file share
 * Paths for various directories
 
 ## Setup
-1. Add execute to the partkeepr-backup.py script
+1. Add execute permission to the partkeepr-backup.py script
 1. Edit the secrets.py file as needed
-1. The log level can be changed in the logging.basicConfig() call. See [Logging Levels](https://docs.python.org/3/library/logging.html#logging-levels) if more details are needed.
+1. The log level can be changed in the __logging.basicConfig()__ call. See [Logging Levels](https://docs.python.org/3/library/logging.html#logging-levels) if more details are needed.
 1. The script adds the directory where it is executed to the path, so it should run from anywhere.
 1. Only standard Python3 libraries are needed.
 
